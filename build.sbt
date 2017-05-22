@@ -1,9 +1,6 @@
 import org.scalatra.sbt._
 import org.scalatra.sbt.PluginKeys._
 import ScalateKeys._
-import com.typesafe.sbt.packager.archetypes.JavaAppPackaging
-  lazy val project = Project (
-).enablePlugins(JavaAppPackaging)
 
 val ScalatraVersion = "2.5.0"
 
