@@ -10,7 +10,7 @@ scalateSettings
 
 organization := "com.hassanabbas9"
 
-name := "Calculator App"
+name := "Calculator-App"
 
 version := "1.0"
 
@@ -47,3 +47,4 @@ scalateTemplateConfig in Compile := {
 }
 
 enablePlugins(JettyPlugin)
+enablePlugins(JavaAppPackaging)
