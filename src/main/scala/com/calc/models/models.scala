@@ -35,7 +35,7 @@ class CalculusExpression(expresion: String) {
 
   // Add spaces to make a standard expression
   def convertToStandardExpression: String = {
-    val parsingIdentifiers = List("+", "-", "/", "*", "(", ")")
+    val parsingIdentifiers = List("+", "-", "/", "*", "(", ")", "^", "{", "}", "%", "[", "]")
     var standardExpression, number = ""
 
     expresion.foreach { e =>
