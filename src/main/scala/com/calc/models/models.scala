@@ -79,16 +79,11 @@ class CalculusExpression(expresion: String) {
             var operand2 = stack.remove(stack.length-1).toDouble
             var result = (operand2 / operand1).toDouble
             stack += result
-          case "^" =>
-            throw new Exception()
-          case "{" =>
-            throw new Exception()
-          case "}" =>
-            throw new Exception()
-          case "%" =>
-            throw new Exception()
           case _ =>
-            stack += v.toDouble
+            if(isNumber(v))
+              stack += v.toDouble
+            else
+              throw new Exception()
         }
       }
     }
@@ -110,7 +105,7 @@ class CalculusExpression(expresion: String) {
 
     def handleRightBracket = {
       var foundRB = false
-      while (!stack.isEmpty && !foundRB) {
+      while(!stack.isEmpty && !foundRB) {
         stack.remove(0)._3 match {
           case (LB) =>
             foundRB = true
