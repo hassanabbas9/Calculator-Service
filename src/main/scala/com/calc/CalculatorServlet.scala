@@ -14,7 +14,7 @@ class CalculatorServlet extends CalculatorAppStack with JacksonJsonSupport {
   private def decodeBase64(query: String): String = {
     var decodedQuery = Base64.getDecoder.decode(query.getBytes(StandardCharsets.UTF_8))
     var standardQuery = new String(decodedQuery, "UTF-8")
-    standardQuery
+    return standardQuery
   }
 
   get("/calculus") {
